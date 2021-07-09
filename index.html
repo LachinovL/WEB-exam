@@ -27,24 +27,47 @@
                 </header>
                 <main>
                     <div id="app">
+                    
                         <div class="stats">
                           <h3 class="stats__title">{{"Текущих задач: "+ tasks.length}}</h3>
-                          <button class="task__btn" @click="close">❎</button>
+                          <button class="task__btn" @click="showModal = true">❎</button>
                         </div>
-                        <div class="add_task" v-if="isElVisible">
+                    
+                        
+                        <div class="add_task" >
                           <div class="add_task__input">
                               <textarea placeholder="Описание" type="text" v-model="new_task.desc"></textarea>
                           </div>
-                          <button class="add_task__btn" @click="add_task">➕</button>
+                          <div class="choice">
+                              <p>Уровень важности</p>
+                            <form>
+                          <label class="container">Первый
+                            <input type="radio" value="100px" name="one" v-model="checked">
+                            
+                        </label>
+                        <label class="container">Второй
+                            <input type="radio" value="200px" name="one" v-model="picked">
+                        </label>
+                        <label class="container">Третий
+                            <input type="radio" value="300px" name="one" v-model="picked">
+                            
+                        </label>
+                        </form>
                         </div>
+                          <button  class="add_task__btn" @click="add_task">➕</button>
+                        </div>
+                        
+                    
                         <div class="task__list">
                         <task @task_done="delete_task(index)" :key="index" v-for="(data,index) in tasks" :data="data" ></task>
                         </div>
+                        </div>
+
                     </div>
                 </main>
 
                 <footer>
-                    <div class="footer">
+                    <div class="footer" :class="[isDarkModeOn ? 'header__dark-theme-text-d' : '']">
                         <div class="footer__FIO">
                             Лачинов Лачин Артурович
                         </div>
@@ -60,4 +83,5 @@
         </div>
     </body>
     <script src="js/script.js"></script>
+
 </html>
