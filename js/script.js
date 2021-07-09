@@ -11,11 +11,11 @@ Vue.component('task',{
     },
     template: `
     <div class="task">
-      <div>
         <h3 class="task__title">{{data.title}}</h3>
         <p v-if="data.desc!=''" class="task__desc">{{data.desc}}</p>
-      </div>
+        <div class="task_button">
       <button class="task__done" @click="task_done()">✔️</button>
+        </div>
     </div>`
   })
   

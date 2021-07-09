@@ -37,8 +37,10 @@
                           </div>
                           <button class="add_task__btn" @click="add_task">➕</button>
                         </div>
+                        <div class="task__list">
                         <task @task_done="delete_task(index)" :key="index" v-for="(data,index) in tasks" :data="data" ></task>
-                      </div>
+                        </div>
+                    </div>
                 </main>
 
                 <footer>

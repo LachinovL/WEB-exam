@@ -135,18 +135,33 @@ input:checked + .header__slider::before {
     color: var(--white);
     font-weight: 500;
   }
+
   .task {
+      flex-wrap: wrap;
+      margin-top: 1em;
+      padding: 1em 1em 1em 1em;
+      border: var(--main) solid 2px;
+      border-radius: 5px;
+      margin-left: 1em;
+      width: 20%;
+  }
+
+  .task_button {
+      text-align: center;
+  }
+
+
+  .task__list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     margin-top: 2em;
     padding: 10px;
-    max-width: 100%;
   }
-  .task:hover {
-    background-color: #2f485811;
-  }
+
+
+
   .task__title {
     font-size: 1.2em;
   }
