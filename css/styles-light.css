@@ -142,3 +142,11 @@ input:checked + .header__slider {
 input:checked + .header__slider::before {
     transform: translateX(26px);
 }
+
+.footer {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 800;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
