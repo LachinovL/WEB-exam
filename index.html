@@ -30,11 +30,11 @@
                     
                         <div class="stats">
                           <h3 class="stats__title">{{"Текущих задач: "+ tasks.length}}</h3>
-                          <button class="task__btn" @click="showModal = true">❎</button>
+                          <button class="task__btn" @click="open">❎</button>
                         </div>
                     
                         
-                        <div class="add_task" >
+                        <div class="add_task" v-if="showModal">
                           <div class="add_task__input">
                               <textarea placeholder="Описание" type="text" v-model="new_task.desc"></textarea>
                           </div>
