@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles-light.css">
+        <link rel="stylesheet" href="css/styles-dark.css">
+    </head>
+    <body>
+        <div class="all-content" :class="[isDarkModeOn ? 'all-content-d' : '']">
+            <div class="all-content__inner">
+                <header class="header">
+                    <div class="header__title" :class="[isDarkModeOn ? 'header__title-d' : '']">
+                        <img src="img/logo-1x.png" srcset="img/logo-1x.png 1x, img/logo-2x.png 2x,
+                        img/logo-3x.png 3x"> 
+                     </div>
+                    <div class="header__name">
+                        Lachinov
+                    </div>
+                    <div class="header__dark-theme">
+                        <h2 :class="[isDarkModeOn ? 'header__dark-theme-text-d' : '']">Тёмная тема</h2>
+                        <label class="header__switch">
+                            <input type="checkbox" v-model="isDarkModeOn">
+                            <span class="header__slider"></span>
+                        </label>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </body>
+</html>

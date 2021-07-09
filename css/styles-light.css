@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button {
+	background: none;
+	cursor: pointer;
+    border-style: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.header__name {
+    font-weight: 800;
+    font-size: 1.5em;
+    transition: .4s;
+}
+
+
+.header {
+    height: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-content__inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header__title  img{
+    width: 4em;
+    height: 4em;
+}
+
+.header__switch input {
+    display: none;
+}
+
+.header__switch {
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2.1em;
+}
+
+.header__dark-theme p {
+    color: black;
+}
+
+.header__dark-theme {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    justify-content: space-between;
+    transition: .4s;
+}
+
+.all-content {
+    min-height: 100vh;
+    transition: .4s;
+}
+
+.header__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 204, 255);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.header__slider:before {
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .header__slider {
+    background-color: rgb(9, 54, 112);
+}
+
+input:checked + .header__slider::before {
+    transform: translateX(26px);
+}
