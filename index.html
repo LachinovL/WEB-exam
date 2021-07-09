@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title></title>
+        <title>Exam</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles-light.css">
         <link rel="stylesheet" href="css/styles-dark.css">
@@ -29,11 +29,10 @@
                     <div id="app">
                         <div class="stats">
                           <h3 class="stats__title">{{"Текущих задач: "+ tasks.length}}</h3>
+                          <button class="task__btn" @click="close">❎</button>
                         </div>
-                        
-                        <div class="add_task">
-                          <div class="add_task__input ">
-                              <input placeholder="Новая задача..." type="text" v-model="new_task.title">
+                        <div class="add_task" v-if="isElVisible">
+                          <div class="add_task__input">
                               <textarea placeholder="Описание" type="text" v-model="new_task.desc"></textarea>
                           </div>
                           <button class="add_task__btn" @click="add_task">➕</button>

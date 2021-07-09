@@ -21,32 +21,32 @@ Vue.component('task',{
   
   var vue = new Vue({
     el: '#app',
+    
     data: {
+     isElVisible: false,
       string: 'asdasda',
       new_task: {
-        title: '',
         desc: ''
       },
       tasks : [
         {
-          title: 'Выполнить экзамен',
-          desc: 'Успеть до 16:00',
+          desc: 'Выполнить экзамен',
         },
       ]
     },
     methods: {
       add_task(){
-        if(this.new_task.title != ''){
+        if(this.new_task.desc != ''){
           this.tasks.push({
-            title: this.new_task.title,
             desc: this.new_task.desc
           });
-          this.new_task.title='';
-          this.new_task.desc='';
         }
       },
       delete_task(id){
         this.tasks.splice(id,1);
+      },
+      close() {
+         this.isElVisible = !this.isElVisible
       }
     }
   })
